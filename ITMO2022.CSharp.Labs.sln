@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO2022.CSharp2.1", "ITMO2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO2022.CSharp2.2", "ITMO2022.CSharp2.2\ITMO2022.CSharp2.2.csproj", "{5415FA83-C037-4BCA-B738-6F8561D08809}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO2022.CSharp.Lab3.1", "ITMO2022.CSharp.Lab3.1\ITMO2022.CSharp.Lab3.1.csproj", "{5222168F-EFC0-416E-AC83-E006E589A3A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{5415FA83-C037-4BCA-B738-6F8561D08809}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5415FA83-C037-4BCA-B738-6F8561D08809}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5415FA83-C037-4BCA-B738-6F8561D08809}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5222168F-EFC0-416E-AC83-E006E589A3A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5222168F-EFC0-416E-AC83-E006E589A3A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5222168F-EFC0-416E-AC83-E006E589A3A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5222168F-EFC0-416E-AC83-E006E589A3A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
