@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+// lab 3.1 Преобразование дня года в дату типа  месяц - день
+// lab 3.2 Проверка вводимого пользователем значения  дня года c пользовательским обработчиком исключительных ситуаций
+// lab 3.3 Учет високосных годов. Конечный вариант программы будет запрашивать у пользователя не только день года, но и сам год.
+// Программа будет определять, является ли год високосным. Если да, то будет проверяться, попадает ли значение дня года в диапазон
+// от 1 до 366. Если год не является високосным, то проверяется попадание значения дня года в диапазон от 1 до 365. 
 
 namespace ITMO2022.CSharp.Lab3._1
 {
@@ -28,15 +33,32 @@ namespace ITMO2022.CSharp.Lab3._1
         {
             try
             {
-                Console.Write("Input the number of day in a year from 1 to 365: ");
-                string line = Console.ReadLine();
-                int dayNum = int.Parse(line);
+                Console.Write("Input a year: ");
+                int yearNum=int.Parse(Console.ReadLine());
 
-                if (dayNum < 1 || dayNum > 365)
-                    throw new ArgumentOutOfRangeException("There is no such a day in a year");
+                // опеределение (не)високосного года (isLeapYear true, если год високосный)
+                bool isLeapYear = (yearNum % 4 == 0) && (yearNum % 100 != 0 || yearNum % 400 == 0);
 
-                int monthNum = 0;
-                /* if (dayNum <= 31)
+                /* проверка високосности:
+                 if (isLeapYear)
+                     Console.WriteLine(yearNum + "  - IS a leap year");
+                 else
+                     Console.WriteLine(yearNum + " - is NOT a leap year");
+                
+                 Присваивание переменной maxDayNum 366, если год високосный и 365, если нет и вывод на экран
+                в качестве правой границы диапазона ввода */
+                int maxDayNum = isLeapYear ? 366 : 365;
+                Console.Write($"Input a days number in a year from 1 to {maxDayNum}: ");
+                int dayNum = int.Parse(Console.ReadLine());
+
+                // lab 3.2. Проверка вводимого пользователем значения  дня года c пользовательским обработчиком исключений
+                if (dayNum < 1 || dayNum > maxDayNum)
+                    throw new ArgumentOutOfRangeException(dayNum + " is out of days in the year range");
+
+                /* Первоначальный вариант - преобразование дня года в дату типа  месяц - день
+
+                  int monthNum = 0;
+                 if (dayNum <= 31)
                      monthNum=0;
                  else
                  {
@@ -147,29 +169,55 @@ namespace ITMO2022.CSharp.Lab3._1
                      default:
                          monthName = "not done yet"; 
                          break;
-                 }*/
-                foreach (int daysInMonth in DaysInMonths)
+                }
+                
+                 
+                 lab 3.3 Учет високосных годов.
+                 */
+                int monthNum = 0;
+                if (isLeapYear)
                 {
-                    if (dayNum <= daysInMonth)
-                        break;
-                    else
+                    foreach (int daysInMonth in DaysInLeapMonths)
                     {
-                        dayNum -= daysInMonth;
-                        monthNum++;
+                        if (dayNum <= daysInMonth)
+                            break;
+                        else
+                        {
+                            dayNum -= daysInMonth;
+                            monthNum++;
+                        }
+                    }
+                }
+                else
+                {
+                    foreach (int daysInMonth in DaysInMonths)
+                    {
+                        if (dayNum <= daysInMonth)
+                            break;
+                        else
+                        {
+                            dayNum -= daysInMonth;
+                            monthNum++;
+                        }
                     }
                 }
 
                 MonthName temp = (MonthName)monthNum;
                 string monthName = temp.ToString();
-
                 Console.WriteLine($"It is {dayNum} of {monthName}");
             }
+
             catch (Exception caught)
             {
-                Console.WriteLine(caught);
+                Console.WriteLine(caught.Message);
             }
         }
+        // создание коллекции дней в невисокосном году
         static System.Collections.ICollection DaysInMonths
             = new int[12] { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+
+        // создание коллекции дней в високосном году
+        static System.Collections.ICollection DaysInLeapMonths
+            = new int[12] { 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
     }
 }

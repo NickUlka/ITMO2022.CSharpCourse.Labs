@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+// lab 1.4. Программа будет запрашивать у пользователя два целых числа, делить первое число на второе и выводить полученный результат.
+// c обработчиком исключительных ситуаций (деление на ноль)
 namespace ITMO2022.CSharp.Lab1._4
 {
     internal class Program

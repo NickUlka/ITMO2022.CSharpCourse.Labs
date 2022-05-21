@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+// lab 2.2. Cоздаybt структуры, которую можно использовать для представления банковских счетов. 
 namespace ITMO2022.CSharp2._2
 {
     public enum AccountType { Checking, Deposit };
@@ -20,7 +20,12 @@ namespace ITMO2022.CSharp2._2
             BankAccount goldAccount;
             goldAccount.accType = AccountType.Checking;
             goldAccount.accBal = (decimal)3200.00;
-            goldAccount.accNo = 123;
+            //lab 2.2.
+            //goldAccount.accNo = 123;
+
+            // lab 2.3 Ввод номера счета с клавиатуры
+            Console.Write("Enter account number: ");
+            goldAccount.accNo = long.Parse(Console.ReadLine());
             Console.WriteLine("*** Account Summary ***");
             Console.WriteLine("Acct Number {0}", goldAccount.accNo);
             Console.WriteLine("Acct Type {0}", goldAccount.accType);

@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-namespace ITMO2022.CSharp2._1
+// lab 2.1. Cоздаybt перечисления для представления различных типов банковских счетов
 {
     public enum AccountType { Checking, Deposit };
     internal class Program
