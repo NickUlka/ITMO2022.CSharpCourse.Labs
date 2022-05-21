@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO2022.CSharp2.2", "ITMO2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO2022.CSharp.Lab3.1", "ITMO2022.CSharp.Lab3.1\ITMO2022.CSharp.Lab3.1.csproj", "{5222168F-EFC0-416E-AC83-E006E589A3A1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO2022.CSharp.Lab4.1", "ITMO2022.CSharp.Lab4.1\ITMO2022.CSharp.Lab4.1.csproj", "{DCE6A24D-BA5B-4D70-A0B1-DC07FFD1937E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITMO2022.CSharp.Lab4.2", "ITMO2022.CSharp.Lab4.2\ITMO2022.CSharp.Lab4.2.csproj", "{B3DFB267-4A54-4802-8545-A5E621C8A49F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{5222168F-EFC0-416E-AC83-E006E589A3A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5222168F-EFC0-416E-AC83-E006E589A3A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5222168F-EFC0-416E-AC83-E006E589A3A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCE6A24D-BA5B-4D70-A0B1-DC07FFD1937E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCE6A24D-BA5B-4D70-A0B1-DC07FFD1937E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCE6A24D-BA5B-4D70-A0B1-DC07FFD1937E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCE6A24D-BA5B-4D70-A0B1-DC07FFD1937E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3DFB267-4A54-4802-8545-A5E621C8A49F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3DFB267-4A54-4802-8545-A5E621C8A49F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3DFB267-4A54-4802-8545-A5E621C8A49F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3DFB267-4A54-4802-8545-A5E621C8A49F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
