@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-// lab 2.2. Cоздаybt структуры, которую можно использовать для представления банковских счетов. 
+// lab 2.2. Cоздание структуры, которую можно использовать для представления банковских счетов. 
 namespace ITMO2022.CSharp2._2
 {
     public enum AccountType { Checking, Deposit };

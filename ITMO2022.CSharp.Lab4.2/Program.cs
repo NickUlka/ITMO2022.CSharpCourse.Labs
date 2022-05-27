@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+// lab 4.2. Использование в методах параметров, передаваемых по ссылке. Дополнительно к lab 4.1. создан метод Swap,
+// который меняет местами значения параметров, передаваемых по ссылке, из метода Greater.
 
 namespace ITMO2022.CSharp.Lab4._2
 {

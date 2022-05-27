@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-// lab 2.1. Cоздаybt перечисления для представления различных типов банковских счетов
+// lab 2.1. Cоздание перечисления для представления различных типов банковских счетов
 namespace ITMO2022.CSharp.Lab2._1
 
 {
